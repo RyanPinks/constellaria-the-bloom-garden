@@ -21,3 +21,25 @@
 @keyframes fadeIn {
   to { opacity: 1; }
 }
+
+#lumen-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.lumen {
+  background-color: #f9f9ff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
