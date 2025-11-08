@@ -7,3 +7,6 @@
     shuffled.forEach(lumen => container.appendChild(lumen));
   });
 </script>
+
+const randomIndex = Math.floor(Math.random() * shuffled.length);
+shuffled[randomIndex].scrollIntoView({ behavior: 'smooth' });
