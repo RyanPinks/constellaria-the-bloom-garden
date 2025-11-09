@@ -108,4 +108,176 @@
       display:block;
       box-shadow: 0 8px 24px rgba(2,6,23,0.6), 0 1px 0 rgba(255,255,255,0.02) inset;
       border:1px solid rgba(255,255,255,0.02);
+      background:linear-gradient(180deg,#0b1224,#081024);
+    }
+
+    /* text area */
+    .copy h2{
+      margin:0 0 8px 0;
+      font-size:18px;
+      font-family:"Playfair Display", serif;
+    }
+
+    .copy p.lead{
+      margin:0 0 12px 0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .copy p{
+      margin:0 0 12px 0;
+      color: #e8eefc;
+      font-size:14px;
+    }
+
+    .quote{
+      margin-top:10px;
+      font-style:italic;
+      color: #f6e6c9;
+      background: linear-gradient(90deg, rgba(246,215,155,0.03), transparent);
+      padding:10px 12px;
+      border-radius:10px;
+      display:inline-block;
+      font-size:13px;
+    }
+
+    .actions{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    .btn{
+      background: linear-gradient(180deg, rgba(246,215,155,0.14), rgba(246,215,155,0.06));
+      border:1px solid rgba(246,215,155,0.16);
+      color: #111;
+      padding:8px 12px;
+      border-radius:10px;
+      font-weight:600;
+      font-size:14px;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    .btn.ghost{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* responsive */
+    @media (max-width:760px){
+      .card{
+        grid-template-columns: 1fr;
+      }
+
+      .img-wrap{
+        max-width:260px;
+        margin:0 auto;
+      }
+
+      .wrap{
+        padding:18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header>
+      <div class="logo" aria-hidden="true">L</div>
+      <div>
+        <h1>Constellaria: The Bloom Garden — <span style="font-weight:400">Lumen Scribe</span></h1>
+        <p class="subtitle">keeper of stories &amp; starlit thoughts</p>
+      </div>
+    </header>
+
+    <article class="card" aria-labelledby="lumen-heading">
+      <!-- Image: replace the src with your file if different -->
+      <div class="img-wrap" aria-hidden="false">
+        <img id="lumen-image" src="lumen-scribe-1024.png" alt="An open glowing book floating in a moonlit garden; starlight spills from the pages" width="1024" height="1024" />
+      </div>
+
+      <div class="copy">
+        <h2 id="lumen-heading">🌌 Welcome, Wanderer of Light</h2>
+        <p class="lead"><strong>I am the <em>Lumen Scribe</em></strong>, keeper of stories and starlit thoughts. Beneath the quiet constellations, words take root and ideas bloom.</p>
+
+        <p>Here, you’ll find whispers of inspiration — fragments gathered from across the garden. Use this corner to browse lore, seed ideas, or gather quiet prompts for your next creation.</p>
+
+        <div class="quote">“Every spark has a story — and every story becomes a star.”</div>
+
+        <div class="actions" role="group" aria-label="Lumen scribe actions">
+          <!-- download button: will download the image currently displayed -->
+          <a id="download-btn" class="btn" href="#" download="lumen-scribe-1024.png" title="Download the Lumen Scribe image">
+            ⤓ Download image
+          </a>
+
+          <!-- link to a hypothetical subpage -->
+          <a class="btn ghost" href="lumen-scribe.html#archive" title="Open the Lumen Scribe archive">
+            ✦ Open archive
+          </a>
+        </div>
+
+        <footer>
+          <small>Section authored by Lumen Scribe — a part of Constellaria: The Bloom Garden.</small>
+        </footer>
+      </div>
+    </article>
+  </div>
+
+  <script>
+    // Make the download button fetch the displayed image (useful if the src is a data URL or remote)
+    (function(){
+      const img = document.getElementById('lumen-image');
+      const btn = document.getElementById('download-btn');
+
+      // If the image is same-origin or data URL, set the href directly.
+      // Otherwise fetch and create blob to force download.
+      function prepareDownload(){
+        const src = img.getAttribute('src') || '';
+        if(!src) return;
+
+        try {
+          const isData = src.startsWith('data:');
+          const isSameOrigin = new URL(src, location.href).origin === location.origin;
+          if(isData || isSameOrigin){
+            btn.href = src;
+            return;
+          }
+        } catch(e){
+          // ignore URL parsing errors
+        }
+
+        // for cross-origin images, fetch them via the page (may require CORS headers)
+        fetch(src, {mode: 'cors'}).then(r => r.blob()).then(blob => {
+          const url = URL.createObjectURL(blob);
+          btn.href = url;
+        }).catch(err => {
+          // fallback: disable download if fetch fails
+          btn.style.display = 'none';
+          console.warn('Could not prepare download link for image:', err);
+        });
+      }
+
+      // prepare on load
+      if (img.complete) prepareDownload();
+      else img.addEventListener('load', prepareDownload);
+    })();
+  </script>
+</body>
+</html>
+      display:block;
+      box-shadow: 0 8px 24px rgba(2,6,23,0.6), 0 1px 0 rgba(255,255,255,0.02) inset;
+      border:1px solid rgba(255,255,255,0.02);
       background:linear-gradient(180deg,#0b1224,#0
