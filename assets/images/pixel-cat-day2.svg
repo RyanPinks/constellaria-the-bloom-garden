@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background - warm room -->
+  <rect width="800" height="600" fill="#f9f4ef"/>
+  
+  <!-- Wooden floor -->
+  <rect x="0" y="400" width="800" height="200" fill="#c4a574"/>
+  <line x1="0" y1="450" x2="800" y2="450" stroke="#b49564" stroke-width="2" opacity="0.5"/>
+  <line x1="0" y1="500" x2="800" y2="500" stroke="#b49564" stroke-width="2" opacity="0.5"/>
+  <line x1="0" y1="550" x2="800" y2="550" stroke="#b49564" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Soft blanket -->
+  <ellipse cx="400" cy="450" rx="150" ry="40" fill="#e8d5c4"/>
+  <ellipse cx="400" cy="440" rx="150" ry="35" fill="#f0ddd0"/>
+  
+  <!-- Tiny sleeping kitten - slightly bigger, new position -->
+  <g id="kitten">
+    <!-- Body - small ball, slightly stretched -->
+    <ellipse cx="400" cy="435" rx="48" ry="36" fill="#5a4a4a"/>
+    <ellipse cx="398" cy="432" rx="43" ry="32" fill="#6a5a5a"/>
+    
+    <!-- Head tucked in, turned slightly -->
+    <circle cx="428" cy="427" r="26" fill="#6a5a5a"/>
+    
+    <!-- Tiny ears -->
+    <path d="M 418 412 L 413 402 L 423 410 Z" fill="#5a4a4a"/>
+    <path d="M 438 412 L 443 402 L 433 410 Z" fill="#5a4a4a"/>
+    
+    <!-- Inner ear -->
+    <path d="M 418 412 L 416 407 L 421 411 Z" fill="#d4b4b4"/>
+    
+    <!-- Closed eyes (still sleeping) -->
+    <line x1="423" y1="425" x2="430" y2="425" stroke="#3a2a2a" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Tiny nose -->
+    <circle cx="426" cy="430" r="2" fill="#d4a4a4"/>
+    
+    <!-- Tiny paw visible now -->
+    <ellipse cx="370" cy="442" rx="8" ry="6" fill="#6a5a5a"/>
+    
+    <!-- Tail curled around body, relaxed more -->
+    <path d="M 360 445 Q 345 435 350 420 Q 355 410 368 413" 
+          fill="none" stroke="#5a4a4a" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Day counter -->
+  <text x="50" y="150" font-family="serif" font-size="24" fill="#4a3a2a">Day 2</text>
+  <text x="50" y="180" font-family="serif" font-size="16" fill="#6a5a4a" font-style="italic">Still dreaming</text>
+  <text x="50" y="210" font-family="serif" font-size="14" fill="#8a7a6a">Growing already</text>
+</svg>

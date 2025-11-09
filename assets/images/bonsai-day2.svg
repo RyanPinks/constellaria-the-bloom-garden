@@ -1,0 +1,42 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f1e8"/>
+  
+  <!-- Wooden table surface -->
+  <rect x="0" y="400" width="800" height="200" fill="#8b6f47"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#6b5437" stroke-width="3"/>
+  
+  <!-- Pot - simple ceramic -->
+  <ellipse cx="400" cy="420" rx="80" ry="25" fill="#5a4a3a"/>
+  <rect x="320" y="395" width="160" height="25" fill="#6b5a4a"/>
+  <ellipse cx="400" cy="395" rx="80" ry="25" fill="#7a6a5a"/>
+  
+  <!-- Soil -->
+  <ellipse cx="400" cy="395" rx="75" ry="20" fill="#3a2a1a"/>
+  
+  <!-- Young bonsai - small trunk with a few branches -->
+  <g id="tree">
+    <!-- Main trunk - slightly thicker -->
+    <path d="M 400 395 Q 405 360 408 320" fill="none" stroke="#4a3a2a" stroke-width="9"/>
+    
+    <!-- Small branches -->
+    <path d="M 408 350 Q 430 345 445 340" fill="none" stroke="#4a3a2a" stroke-width="3"/>
+    <path d="M 408 335 Q 380 330 365 328" fill="none" stroke="#4a3a2a" stroke-width="3"/>
+    <!-- New small branch emerging -->
+    <path d="M 408 340 Q 415 335 422 332" fill="none" stroke="#4a3a2a" stroke-width="2"/>
+    
+    <!-- Young leaves - a bit fuller -->
+    <circle cx="445" cy="340" r="16" fill="#6b8e4e" opacity="0.8"/>
+    <circle cx="438" cy="337" r="13" fill="#7a9e5e" opacity="0.8"/>
+    <circle cx="450" cy="336" r="11" fill="#7a9e5e" opacity="0.8"/>
+    <circle cx="365" cy="328" r="15" fill="#6b8e4e" opacity="0.8"/>
+    <circle cx="372" cy="325" r="12" fill="#7a9e5e" opacity="0.8"/>
+    <circle cx="358" cy="326" r="10" fill="#6b8e4e" opacity="0.8"/>
+    <circle cx="408" cy="320" r="14" fill="#7a9e5e" opacity="0.9"/>
+    <circle cx="422" cy="332" r="8" fill="#7a9e5e" opacity="0.7"/>
+  </g>
+  
+  <!-- Day counter -->
+  <text x="50" y="550" font-family="serif" font-size="24" fill="#4a3a2a">Day 2</text>
+  <text x="50" y="580" font-family="serif" font-size="16" fill="#6a5a4a" font-style="italic">Settling in</text>
+</svg>
